@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "lucide-react": "^1.16.0",
+    "react-hook-form": "^7.76.0",
+    "recharts": "^3.8.1",
+    "zod": "^4.4.3"
+  }
+}
