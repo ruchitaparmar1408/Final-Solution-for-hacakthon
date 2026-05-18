@@ -1,0 +1,112 @@
+{
+  "kpis": [
+    {
+      "id": "total-goals",
+      "title": "Active goals",
+      "value": "156",
+      "subtitle": "Across 8 departments",
+      "trend": { "value": 12, "isPositive": true },
+      "accent": "blue"
+    },
+    {
+      "id": "completion",
+      "title": "Avg. completion",
+      "value": "78%",
+      "subtitle": "Weighted team progress",
+      "trend": { "value": 6.2, "isPositive": true },
+      "accent": "cyan"
+    },
+    {
+      "id": "approval-rate",
+      "title": "Approval rate",
+      "value": "79.5%",
+      "subtitle": "124 of 156 approved",
+      "trend": { "value": 3.1, "isPositive": true },
+      "accent": "emerald"
+    },
+    {
+      "id": "review-sla",
+      "title": "Avg. review time",
+      "value": "2.4d",
+      "subtitle": "Manager decision SLA",
+      "trend": { "value": 8, "isPositive": true },
+      "accent": "violet"
+    }
+  ],
+  "teamPerformance": [
+    { "month": "Jan", "overall": 58, "onTrack": 52, "atRisk": 28 },
+    { "month": "Feb", "overall": 62, "onTrack": 55, "atRisk": 25 },
+    { "month": "Mar", "overall": 68, "onTrack": 61, "atRisk": 22 },
+    { "month": "Apr", "overall": 74, "onTrack": 68, "atRisk": 18 },
+    { "month": "May", "overall": 78, "onTrack": 72, "atRisk": 15 },
+    { "month": "Jun", "overall": 82, "onTrack": 76, "atRisk": 12 }
+  ],
+  "goalCompletionTrend": [
+    { "month": "Jan", "completed": 28, "inProgress": 95, "notStarted": 33 },
+    { "month": "Feb", "completed": 35, "inProgress": 92, "notStarted": 29 },
+    { "month": "Mar", "completed": 48, "inProgress": 88, "notStarted": 20 },
+    { "month": "Apr", "completed": 62, "inProgress": 78, "notStarted": 16 },
+    { "month": "May", "completed": 78, "inProgress": 62, "notStarted": 16 },
+    { "month": "Jun", "completed": 94, "inProgress": 48, "notStarted": 14 }
+  ],
+  "approvalMetrics": {
+    "approved": 124,
+    "pending": 18,
+    "rejected": 14,
+    "approvalRate": 79.5,
+    "rejectionRate": 8.9,
+    "pendingRate": 11.6
+  },
+  "approvalTrend": [
+    { "month": "Jan", "rate": 68, "submitted": 22 },
+    { "month": "Feb", "rate": 71, "submitted": 28 },
+    { "month": "Mar", "rate": 74, "submitted": 31 },
+    { "month": "Apr", "rate": 77, "submitted": 35 },
+    { "month": "May", "rate": 79, "submitted": 38 },
+    { "month": "Jun", "rate": 80, "submitted": 42 }
+  ],
+  "departmentComparison": [
+    {
+      "department": "Engineering",
+      "goals": 45,
+      "completed": 32,
+      "approvalRate": 82,
+      "avgProgress": 71
+    },
+    {
+      "department": "Sales",
+      "goals": 38,
+      "completed": 28,
+      "approvalRate": 85,
+      "avgProgress": 76
+    },
+    {
+      "department": "Marketing",
+      "goals": 25,
+      "completed": 20,
+      "approvalRate": 88,
+      "avgProgress": 74
+    },
+    {
+      "department": "HR",
+      "goals": 18,
+      "completed": 14,
+      "approvalRate": 78,
+      "avgProgress": 69
+    },
+    {
+      "department": "Finance",
+      "goals": 15,
+      "completed": 12,
+      "approvalRate": 80,
+      "avgProgress": 72
+    },
+    {
+      "department": "Support",
+      "goals": 15,
+      "completed": 10,
+      "approvalRate": 73,
+      "avgProgress": 65
+    }
+  ]
+}

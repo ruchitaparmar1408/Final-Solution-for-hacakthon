@@ -1,0 +1,167 @@
+// Realistic dummy data for the HR Performance Dashboard
+
+export const currentUser = {
+  name: "Priya Sharma",
+  role: "HR Manager",
+  initials: "PS",
+}
+
+export const dashboardStats = {
+    totalGoals: 156,
+    approvedGoals: 124,
+    pendingReviews: 18,
+    teamProgress: 78,
+  }
+  
+  export const goals = [
+    {
+      id: "1",
+      name: "Complete Q2 Sales Targets",
+      weightage: 25,
+      status: "on-track",
+      progress: 85,
+      dueDate: "2026-06-30",
+      approvalStatus: "approved",
+      assignee: "Ruchita parmar",
+      department: "Sales",
+    },
+    {
+      id: "2",
+      name: "Launch New Product Feature",
+      weightage: 20,
+      status: "at-risk",
+      progress: 45,
+      dueDate: "2026-05-25",
+      approvalStatus: "pending",
+      assignee: "Dilipkumar Kalsariya",
+      department: "Engineering",
+    },
+    {
+      id: "3",
+      name: "Reduce Customer Churn by 15%",
+      weightage: 15,
+      status: "on-track",
+      progress: 72,
+      dueDate: "2026-07-15",
+      approvalStatus: "approved",
+      assignee: "Prachi Shukla",
+      department: "Customer Success",
+    },
+    {
+      id: "4",
+      name: "Implement New CRM System",
+      weightage: 30,
+      status: "completed",
+      progress: 100,
+      dueDate: "2026-04-30",
+      approvalStatus: "approved",
+      assignee: "Bobby Prashant",
+      department: "IT",
+    },
+    {
+      id: "5",
+      name: "Hire 10 Senior Engineers",
+      weightage: 20,
+      status: "behind",
+      progress: 30,
+      dueDate: "2026-06-01",
+      approvalStatus: "approved",
+      assignee: "Harshitha ",
+      department: "HR",
+    },
+    {
+      id: "6",
+      name: "Achieve SOC 2 Compliance",
+      weightage: 25,
+      status: "on-track",
+      progress: 68,
+      dueDate: "2026-08-31",
+      approvalStatus: "pending",
+      assignee: "Nishant Singh",
+      department: "Security",
+    },
+    {
+      id: "7",
+      name: "Increase NPS Score to 70+",
+      weightage: 15,
+      status: "on-track",
+      progress: 82,
+      dueDate: "2026-06-30",
+      approvalStatus: "approved",
+      assignee: "Khushi Pranami",
+      department: "Product",
+    },
+    {
+      id: "8",
+      name: "Reduce Support Ticket Resolution Time",
+      weightage: 10,
+      status: "at-risk",
+      progress: 55,
+      dueDate: "2026-05-31",
+      approvalStatus: "rejected",
+      assignee: "Manisha Gohil",
+      department: "Support",
+    },
+  ]
+  
+  export const recentActivities = [
+    {
+      id: "1",
+      user: "Ruchita parmar",
+      action: "completed goal",
+      target: "Q1 Revenue Target",
+      time: "2 hours ago",
+      avatar: "RP",
+    },
+    {
+      id: "2",
+      user: "Dilipkumar Kalsariya",
+      action: "submitted for review",
+      target: "Product Launch Plan",
+      time: "4 hours ago",
+      avatar: "DK",
+    },
+    {
+      id: "3",
+      user: "Prachi Shukla",
+      action: "updated progress on",
+      target: "Customer Retention Initiative",
+      time: "5 hours ago",
+      avatar: "PS",
+    },
+    {
+      id: "4",
+      user: "Bobby Prashant",
+      action: "approved",
+      target: "Infrastructure Upgrade",
+      time: "Yesterday",
+      avatar: "BP",
+    },
+    {
+      id: "5",
+      user: "Harshitha Chaudhary",
+      action: "created new goal",
+      target: "Talent Acquisition Q2",
+      time: "Yesterday",
+      avatar: "HC",
+    },
+  ]
+  
+  export const analyticsData = {
+    goalsByDepartment: [
+      { department: "Engineering", goals: 45, completed: 32 },
+      { department: "Sales", goals: 38, completed: 28 },
+      { department: "Marketing", goals: 25, completed: 20 },
+      { department: "HR", goals: 18, completed: 14 },
+      { department: "Finance", goals: 15, completed: 12 },
+      { department: "Support", goals: 15, completed: 10 },
+    ],
+    monthlyProgress: [
+      { month: "Jan", progress: 45 },
+      { month: "Feb", progress: 52 },
+      { month: "Mar", progress: 61 },
+      { month: "Apr", progress: 68 },
+      { month: "May", progress: 78 },
+    ],
+  }
+  
