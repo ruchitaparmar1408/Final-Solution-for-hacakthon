@@ -14,7 +14,7 @@ import {
   ChartLegend,
   ChartLegendContent,
 } from "@/components/ui/chart"
-import { DarkGlassPanel } from "@/components/analytics/ui/dark-glass-panel"
+import { EnterpriseChartPanel } from "@/components/analytics/ui/enterprise-chart-panel"
 import { ChartPanelHeader } from "@/components/analytics/chart-panel-header"
 import { chartGridStroke, chartTickStyle } from "@/lib/analytics-dashboard"
 import type { TeamPerformancePoint } from "@/lib/analytics-dashboard"
@@ -26,7 +26,7 @@ interface TeamPerformanceChartProps {
 
 export function TeamPerformanceChart({ data, delay = 0 }: TeamPerformanceChartProps) {
   return (
-    <DarkGlassPanel animate delay={delay} glow="blue" className="p-5 sm:p-6">
+    <EnterpriseChartPanel animate delay={delay} className="p-5 sm:p-6">
       <ChartPanelHeader
         title="Team performance index"
         description="Overall progress vs on-track and at-risk goal distribution"
@@ -91,6 +91,6 @@ export function TeamPerformanceChart({ data, delay = 0 }: TeamPerformanceChartPr
           />
         </AreaChart>
       </ChartContainer>
-    </DarkGlassPanel>
+    </EnterpriseChartPanel>
   )
 }

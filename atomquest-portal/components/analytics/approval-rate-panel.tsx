@@ -8,7 +8,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 import { cn } from "@/lib/utils"
-import { DarkGlassPanel } from "@/components/analytics/ui/dark-glass-panel"
+import { EnterpriseChartPanel } from "@/components/analytics/ui/enterprise-chart-panel"
 import { ChartPanelHeader } from "@/components/analytics/chart-panel-header"
 import {
   chartGridStroke,
@@ -37,7 +37,7 @@ export function ApprovalRatePanel({
   ]
 
   return (
-    <DarkGlassPanel animate delay={delay} glow="emerald" className="p-5 sm:p-6">
+    <EnterpriseChartPanel animate delay={delay} className="p-5 sm:p-6">
       <ChartPanelHeader
         title="Approval rate metrics"
         description="Manager decision distribution and monthly approval velocity"
@@ -51,7 +51,7 @@ export function ApprovalRatePanel({
         ].map((item) => (
           <div
             key={item.label}
-            className="rounded-xl border border-white/[0.06] bg-white/[0.03] px-3 py-3 text-center"
+            className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-center dark:border-slate-700 dark:bg-slate-800/50"
           >
             <p className="text-[10px] font-medium uppercase tracking-wide text-slate-500">
               {item.label}
@@ -122,6 +122,6 @@ export function ApprovalRatePanel({
           </BarChart>
         </ChartContainer>
       </div>
-    </DarkGlassPanel>
+    </EnterpriseChartPanel>
   )
 }

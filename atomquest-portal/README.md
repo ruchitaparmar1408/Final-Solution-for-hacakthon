@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AtomQuest — Goal Setting & Performance Portal
 
-## Getting Started
+Enterprise OKR/KPI performance management portal built for hackathon demos. Supports employee goal management, manager approvals, admin governance, analytics, audit trails, and quarterly check-ins.
 
-First, run the development server:
+## Tech stack
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **shadcn/ui** (Base UI primitives)
+- **Recharts** for analytics
+- Client-side session storage for demo auth and persistence
+
+## Quick start
 
 ```bash
+cd atomquest-portal
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) — you will be redirected to the login page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Demo credentials
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Use any valid email and a password with **6+ characters**. Select a role on sign-in:
 
-## Learn More
+| Role | Landing page | Capabilities |
+|------|--------------|--------------|
+| **Employee** | `/employee/dashboard` | Create/edit goals, weightage validation, goal locking |
+| **Manager** | `/manager/dashboard` | Team overview, approvals, team reviews, analytics |
+| **Admin** | `/admin/dashboard` | Org console, users, escalations, audit logs, analytics |
 
-To learn more about Next.js, take a look at the following resources:
+Example: `ruchita.parmar@atomquest.in` / `demo123` → Employee
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Employee
+- Personal goal CRUD with weightage rules (max 8 goals, min 10% each, total ≤ 100%)
+- Goal locking after manager approval
+- Quarterly check-in tracking (`/checkins`)
 
-## Deploy on Vercel
+### Manager
+- Team dashboard with direct-report progress
+- Goal approval workflow with inline edit, comments, audit feed
+- Team reviews (`/reviews`)
+- HR analytics (`/analytics`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Admin
+- Organization console with cycle status, shared goals, escalations
+- User management (`/admin/users`)
+- Escalation tracking (`/admin/escalations`)
+- Full audit log with search and filters (`/audit`)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Cross-cutting
+- Role-aware sidebar navigation
+- Notification center with unread count and mark-as-read
+- Profile menu (Profile, Settings, Help, Sign out)
+- Organization goals registry (`/goals`)
+- Recharts analytics dashboard
+
+## Project structure
+
+```
+app/                    # Routes (login, role dashboards, shared pages)
+components/
+  dashboard/            # AppShell, Sidebar, TopNav, AuthGuard
+  employee/goals/       # Employee goal module
+  manager/              # Approvals + team overview
+  admin/                # Admin console
+  analytics/            # Charts and KPI cards
+  audit/                # Audit log table
+  notifications/        # Notification panel
+lib/                    # Auth, navigation, audit, notifications, seed data
+```
+
+## Deployment
+
+```bash
+npm run build
+npm start
+```
+
+Deploy to Vercel by connecting the `atomquest-portal` directory as the project root.
+
+## Demo flow (evaluators)
+
+1. Sign in as **Manager** → review team on dashboard → open **Goal Approvals**
+2. Sign in as **Employee** → create goals → submit for review
+3. Sign in as **Manager** → approve goals (locks employee goals)
+4. Open **Analytics** for org-wide charts
+5. Sign in as **Admin** → **Audit Logs**, **Escalations**, **User Management**
+
+---
+
+Built for AtomQuest hackathon — enterprise HR performance management.

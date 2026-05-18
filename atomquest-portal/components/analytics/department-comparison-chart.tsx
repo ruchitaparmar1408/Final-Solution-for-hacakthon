@@ -8,7 +8,7 @@ import {
   ChartLegend,
   ChartLegendContent,
 } from "@/components/ui/chart"
-import { DarkGlassPanel } from "@/components/analytics/ui/dark-glass-panel"
+import { EnterpriseChartPanel } from "@/components/analytics/ui/enterprise-chart-panel"
 import { ChartPanelHeader } from "@/components/analytics/chart-panel-header"
 import { chartGridStroke, chartTickStyle } from "@/lib/analytics-dashboard"
 import type { DepartmentComparison } from "@/lib/analytics-dashboard"
@@ -23,7 +23,7 @@ export function DepartmentComparisonChart({
   delay = 0,
 }: DepartmentComparisonChartProps) {
   return (
-    <DarkGlassPanel animate delay={delay} glow="violet" className="p-5 sm:p-6">
+    <EnterpriseChartPanel animate delay={delay} className="p-5 sm:p-6">
       <ChartPanelHeader
         title="Department comparison"
         description="Goals volume, completion count, and approval rate by department"
@@ -93,6 +93,6 @@ export function DepartmentComparisonChart({
           />
         </BarChart>
       </ChartContainer>
-    </DarkGlassPanel>
+    </EnterpriseChartPanel>
   )
 }

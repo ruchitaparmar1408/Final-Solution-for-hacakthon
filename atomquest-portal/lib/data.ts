@@ -1,9 +1,9 @@
 // Realistic dummy data for the HR Performance Dashboard
 
 export const currentUser = {
-  name: "Priya Sharma",
+  name: "Kalpana Gohil",
   role: "HR Manager",
-  initials: "PS",
+  initials: "KG",
 }
 
 export const dashboardStats = {

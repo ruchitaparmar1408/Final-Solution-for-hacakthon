@@ -2,7 +2,7 @@
 
 import { ArrowDownRight, ArrowUpRight, Target, TrendingUp, CheckCircle2, Clock } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { DarkGlassPanel } from "@/components/analytics/ui/dark-glass-panel"
+import { EnterpriseChartPanel } from "@/components/analytics/ui/enterprise-chart-panel"
 import type { AnalyticsKpi, KpiAccent } from "@/lib/analytics-dashboard"
 
 const iconMap = {
@@ -49,20 +49,18 @@ export function AnalyticsKpiCards({ kpis }: AnalyticsKpiCardsProps) {
         const Icon = iconMap[kpi.id as keyof typeof iconMap] ?? Target
         const accent = accentStyles[kpi.accent]
         return (
-          <DarkGlassPanel
+          <EnterpriseChartPanel
             key={kpi.id}
-            hover
             animate
             delay={index * 80}
-            glow={accent.glow}
-            className={cn("p-5 ring-1", accent.ring)}
+            className={cn("p-5 ring-1 transition-shadow hover:shadow-md", accent.ring)}
           >
             <div className="flex items-start justify-between gap-3">
               <div className="space-y-3">
-                <p className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                <p className="text-xs font-medium uppercase tracking-wider text-slate-500">
                   {kpi.title}
                 </p>
-                <p className="text-3xl font-bold tabular-nums tracking-tight text-white">
+                <p className="text-3xl font-bold tabular-nums tracking-tight text-slate-900 dark:text-white">
                   {kpi.value}
                 </p>
                 <p className="text-xs text-slate-500">{kpi.subtitle}</p>
@@ -91,7 +89,7 @@ export function AnalyticsKpiCards({ kpis }: AnalyticsKpiCardsProps) {
                 <Icon className="h-5 w-5" />
               </div>
             </div>
-          </DarkGlassPanel>
+          </EnterpriseChartPanel>
         )
       })}
     </div>

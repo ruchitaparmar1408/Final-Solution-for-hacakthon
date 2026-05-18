@@ -8,7 +8,7 @@ import {
   ChartLegend,
   ChartLegendContent,
 } from "@/components/ui/chart"
-import { DarkGlassPanel } from "@/components/analytics/ui/dark-glass-panel"
+import { EnterpriseChartPanel } from "@/components/analytics/ui/enterprise-chart-panel"
 import { ChartPanelHeader } from "@/components/analytics/chart-panel-header"
 import { chartGridStroke, chartTickStyle } from "@/lib/analytics-dashboard"
 import type { GoalCompletionPoint } from "@/lib/analytics-dashboard"
@@ -23,7 +23,7 @@ export function GoalCompletionTrendChart({
   delay = 0,
 }: GoalCompletionTrendChartProps) {
   return (
-    <DarkGlassPanel animate delay={delay} glow="cyan" className="p-5 sm:p-6">
+    <EnterpriseChartPanel animate delay={delay} className="p-5 sm:p-6">
       <ChartPanelHeader
         title="Goal completion trends"
         description="Completed vs in-progress vs not started by month"
@@ -70,6 +70,6 @@ export function GoalCompletionTrendChart({
           />
         </BarChart>
       </ChartContainer>
-    </DarkGlassPanel>
+    </EnterpriseChartPanel>
   )
 }

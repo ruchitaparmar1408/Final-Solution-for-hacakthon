@@ -1,13 +1,13 @@
 import { DashboardShell } from "@/components/dashboard/dashboard-shell"
-import { ManagerApprovalModule } from "@/components/manager/approvals/manager-approval-module"
+import { ManagerTeamOverview } from "@/components/manager/manager-team-overview"
 
 export default function ManagerDashboardPage() {
   return (
     <DashboardShell
       title="Manager Dashboard"
-      description="Review employee-submitted goals, adjust progress, and approve or reject with audit trail"
+      description="Team overview, pending reviews, and performance at a glance"
     >
-      <ManagerApprovalModule />
+      <ManagerTeamOverview />
     </DashboardShell>
   )
 }
